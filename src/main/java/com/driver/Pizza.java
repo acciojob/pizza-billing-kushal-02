@@ -73,7 +73,7 @@ public class Pizza {
 //        Paperbag Added: 20
 //        Total Price: 470
         getPrice();
-         bill = "Base Price of the Pizza: " + this.basePrice + "\n";
+         bill = "Base Price of The Pizza: " + this.basePrice + "\n";
         if(isCheeseAdded){
             bill += "Extra Cheese Added: " + cheesePrice + "\n";
         }
