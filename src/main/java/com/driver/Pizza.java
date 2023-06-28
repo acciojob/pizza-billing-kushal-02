@@ -6,18 +6,18 @@ public class Pizza {
      private Boolean isVeg;
     private String bill;
 
-    final private static int vegBasePrice = 300;
-    final private static int nonVegBasePrice = 400;
-    final private static int cheesePrice = 80;
-    final private static int vegToppingPrice = 70;
-    final private static int nonVegToppingPrice = 120;
-    final private static int paperBagPrice = 20;
+      private static int vegBasePrice = 300;
+      private static int nonVegBasePrice = 400;
+      private static int cheesePrice = 80;
+      private static int vegToppingPrice = 70;
+      private static int nonVegToppingPrice = 120;
+      private static int paperBagPrice = 20;
 
     private static boolean isCheeseAdded;
     private static boolean isToppingAdded;
     private static boolean isPaperBagAdded;
     public int myToppingPrice =0;
-    final private int basePrice;
+      private int basePrice;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
