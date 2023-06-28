@@ -22,7 +22,7 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         this.basePrice = isVeg ? vegBasePrice : nonVegBasePrice;
-        this.price = this.basePrice;
+        this.price = 0;
         this.bill = "";
         isCheeseAdded = false;
         isToppingAdded = false;
@@ -31,6 +31,7 @@ public class Pizza {
     }
 
     public int getPrice(){
+        this.price = basePrice;
         if(isCheeseAdded){
             this.price += cheesePrice;
         }
