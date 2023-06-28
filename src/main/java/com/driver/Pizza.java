@@ -3,30 +3,30 @@ package com.driver;
 public class Pizza {
 
     private int price;
-    private Boolean isVeg;
+    final private Boolean isVeg;
     private String bill;
 
-    private static int vegBasePrice = 300;
-    private static int nonVegBasePrice = 400;
-    private static int cheesePrice = 80;
-    private static int vegToppingPrice = 70;
-    private static int nonVegToppingPrice = 120;
-    private static int paperBagPrice = 20;
+    final private static int vegBasePrice = 300;
+    final private static int nonVegBasePrice = 400;
+    final private static int cheesePrice = 80;
+    final private static int vegToppingPrice = 70;
+    final private static int nonVegToppingPrice = 120;
+    final private static int paperBagPrice = 20;
 
     private static boolean isCheeseAdded;
     private static boolean isToppingAdded;
     private static boolean isPaperBagAdded;
     private int myToppingPrice =0;
-    private int basePrice = 0;
+    final private int basePrice;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         this.basePrice = isVeg ? vegBasePrice : nonVegBasePrice;
         this.price = this.basePrice;
         this.bill = "";
-        this.isCheeseAdded = false;
-        this.isToppingAdded = false;
-        this.isPaperBagAdded = false;
+        isCheeseAdded = false;
+        isToppingAdded = false;
+        isPaperBagAdded = false;
         // your code goes here
     }
 
@@ -82,7 +82,7 @@ public class Pizza {
         if(isPaperBagAdded){
             bill += "Paperbag Added: " + paperBagPrice + "\n";
         }
-        bill += "Total Price: " + this.price + "\n";
+        bill += "Total Price: " + getPrice() + "\n";
         return this.bill;
     }
 }
